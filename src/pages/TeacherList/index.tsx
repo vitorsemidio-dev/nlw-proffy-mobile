@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text, TextInput } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -8,39 +8,45 @@ import TeacherItem from '../../components/TeacherItem';
 import styles from './styles';
 
 function TeacherList() {
+  const [isFiltersVisible, setIsFiltersVisible] = useState(false);
   return (
     <View style={styles.container} >
-      <PageHeader title="Proffys disponíveis">
-        <View style={styles.searchForm}>
-          <Text style={styles.label}>
-            Matéria
-          </Text>
-          <TextInput
-            style={styles.input}
-            placeholderTextColor="#c1bccc"
-            placeholder="Qual a matéria?"
-          />
+      <PageHeader 
+        title="Proffys disponíveis"
+        headerRight={<Text>Teste</Text>}
+      >
+        { isFiltersVisible && (
+          <View style={styles.searchForm}>
+            <Text style={styles.label}>
+              Matéria
+            </Text>
+            <TextInput
+              style={styles.input}
+              placeholderTextColor="#c1bccc"
+              placeholder="Qual a matéria?"
+            />
 
-          <View style={styles.inputGroup}>
-            <View style={styles.inputBlock}>
-              <Text style={styles.label}>Dia da semana</Text>
-              <TextInput 
-                style={styles.input}
-                placeholderTextColor="#c1bccc"
-                placeholder="Qual o dia?"
-              />
-            </View>
+            <View style={styles.inputGroup}>
+              <View style={styles.inputBlock}>
+                <Text style={styles.label}>Dia da semana</Text>
+                <TextInput 
+                  style={styles.input}
+                  placeholderTextColor="#c1bccc"
+                  placeholder="Qual o dia?"
+                />
+              </View>
 
-            <View style={styles.inputBlock}>
-              <Text style={styles.label}>Horário</Text>
-              <TextInput 
-                style={styles.input}
-                placeholderTextColor="#c1bccc"
-                placeholder="Qual horário"
-              />
+              <View style={styles.inputBlock}>
+                <Text style={styles.label}>Horário</Text>
+                <TextInput 
+                  style={styles.input}
+                  placeholderTextColor="#c1bccc"
+                  placeholder="Qual horário"
+                />
+              </View>
             </View>
           </View>
-        </View>
+        )}
       </PageHeader>
       <ScrollView
         style={styles.teacherList}
