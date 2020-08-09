@@ -21,7 +21,7 @@ const TeacherItem: React.FC = () => {
 
         <View style={styles.profileInfo}>
           <Text style={styles.name}>
-            This Person Does Not Exist
+            This Person
           </Text>
 
           <Text style={styles.subject}>
