@@ -10,15 +10,33 @@ const styles = StyleSheet.create({
     marginTop: -40,
   },
 
-  searchForm: {},
+  searchForm: {
+    marginBottom: 8,
+  },
 
-  label: {},
+  label: {
+    color: '#d4c2ff',
+    fontFamily: 'Poppins_400Regular',
+  },
 
-  input: {},
+  input: {
+    height: 54,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    justifyContent: 'center',
+    paddingHorizontal: 16,
+    marginTop: 4,
+    marginBottom: 16,
+  },
 
-  inputGroup: {},
+  inputGroup: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
 
-  inputBlock: {},
+  inputBlock: {
+    width: '48%',
+  },
 });
 
 export default styles;

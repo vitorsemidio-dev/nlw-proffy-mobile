@@ -17,6 +17,7 @@ function TeacherList() {
           </Text>
           <TextInput
             style={styles.input}
+            placeholderTextColor="#c1bccc"
             placeholder="Qual a matéria?"
           />
 
@@ -25,6 +26,7 @@ function TeacherList() {
               <Text style={styles.label}>Dia da semana</Text>
               <TextInput 
                 style={styles.input}
+                placeholderTextColor="#c1bccc"
                 placeholder="Qual o dia?"
               />
             </View>
@@ -33,6 +35,7 @@ function TeacherList() {
               <Text style={styles.label}>Horário</Text>
               <TextInput 
                 style={styles.input}
+                placeholderTextColor="#c1bccc"
                 placeholder="Qual horário"
               />
             </View>
