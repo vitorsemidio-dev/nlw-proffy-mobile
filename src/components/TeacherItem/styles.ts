@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
 
   bio: {
-    margin: 24,
+    marginHorizontal: 24,
     fontFamily: 'Poppins_400Regular',
     fontSize: 14,
     lineHeight: 24,
