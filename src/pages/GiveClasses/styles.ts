@@ -29,6 +29,21 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins_400Regular',
     maxWidth: 240,
   },
+
+  okButton: {
+    marginVertical: 40,
+    backgroundColor: '#04d361',
+    height: 68,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 8,
+  },
+
+  okButtonText: {
+    fontSize: 16,
+    fontFamily: 'Archivo_700Bold',
+    color: '#fff',
+  }
 });
 
 export default styles;

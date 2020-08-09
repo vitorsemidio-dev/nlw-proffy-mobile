@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, ImageBackground } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
 
 import giveClassesBgImage from '../../assets/images/give-classes-background.png';
 
@@ -19,6 +20,12 @@ function GiveClasses() {
         </Text>
 
       </ImageBackground>
+
+      <RectButton style={styles.okButton}>
+        <Text style={styles.okButtonText}>
+          Tudo Bem
+        </Text>
+      </RectButton>
     </View>
   )
 }
