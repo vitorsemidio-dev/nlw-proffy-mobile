@@ -10,12 +10,17 @@ import styles from './styles';
 
 function TeacherList() {
   const [isFiltersVisible, setIsFiltersVisible] = useState(false);
+
+  function handleToggleFiltersVisible() {
+    setIsFiltersVisible(!isFiltersVisible);
+  }
+
   return (
     <View style={styles.container} >
       <PageHeader 
         title="Proffys disponíveis"
         headerRight={(
-          <BorderlessButton>
+          <BorderlessButton onPress={handleToggleFiltersVisible}>
             <Feather name="filter" size={20} color="#fff" />
           </BorderlessButton>
         )}
