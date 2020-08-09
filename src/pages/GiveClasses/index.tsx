@@ -1,10 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ImageBackground } from 'react-native';
+
+import giveClassesBgImage from '../../assets/images/give-classes-background.png';
+
+import styles from './styles';
 
 function GiveClasses() {
   return (
-    <View>
-      <Text>Give Classes</Text>
+    <View style={styles.container}>
+      <ImageBackground 
+        style={styles.content}
+        source={giveClassesBgImage}>
+
+      </ImageBackground>
     </View>
   )
 }
