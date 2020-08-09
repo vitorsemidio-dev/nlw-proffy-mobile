@@ -9,8 +9,14 @@ function GiveClasses() {
   return (
     <View style={styles.container}>
       <ImageBackground 
+        resizeMode="contain"
         style={styles.content}
-        source={giveClassesBgImage}>
+        source={giveClassesBgImage}
+      >
+        <Text style={styles.title}>Quer ser um Proffy</Text>
+        <Text style={styles.description}>
+          Para começar, você precisa se cadastrar como um professor na nossa plataforma web
+        </Text>
 
       </ImageBackground>
     </View>
