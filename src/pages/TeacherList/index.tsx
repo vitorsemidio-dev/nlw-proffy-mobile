@@ -11,8 +11,20 @@ import styles from './styles';
 function TeacherList() {
   const [isFiltersVisible, setIsFiltersVisible] = useState(false);
 
+  const [subject, setSubject] = useState('');
+  const [week_day, setWeekDay] = useState('');
+  const [time, setTime] = useState('');
+
   function handleToggleFiltersVisible() {
     setIsFiltersVisible(!isFiltersVisible);
+  }
+
+  function handleFiltersSubmit() {
+    console.log({
+      subject,
+      week_day,
+      time,
+    })
   }
 
   return (
@@ -32,6 +44,8 @@ function TeacherList() {
             </Text>
             <TextInput
               style={styles.input}
+              value={subject}
+              onChangeText={(text) => setSubject(text)}
               placeholderTextColor="#c1bccc"
               placeholder="Qual a matéria?"
             />
@@ -41,6 +55,8 @@ function TeacherList() {
                 <Text style={styles.label}>Dia da semana</Text>
                 <TextInput 
                   style={styles.input}
+                  value={week_day}
+                  onChangeText={(text) => setWeekDay(text)}
                   placeholderTextColor="#c1bccc"
                   placeholder="Qual o dia?"
                 />
@@ -50,13 +66,15 @@ function TeacherList() {
                 <Text style={styles.label}>Horário</Text>
                 <TextInput 
                   style={styles.input}
+                  value={time}
+                  onChangeText={(text) => setTime(text)}
                   placeholderTextColor="#c1bccc"
                   placeholder="Qual horário"
                 />
               </View>
             </View>
 
-            <RectButton style={styles.submitButton}>
+            <RectButton onPress={handleFiltersSubmit} style={styles.submitButton}>
               <Text style={styles.submitButtonText}>
                 Filtrar
               </Text>
