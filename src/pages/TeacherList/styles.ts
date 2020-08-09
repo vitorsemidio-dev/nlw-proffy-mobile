@@ -7,8 +7,18 @@ const styles = StyleSheet.create({
   },
 
   teacherList: {
-    marginTop: -60,
+    marginTop: -40,
   },
+
+  searchForm: {},
+
+  label: {},
+
+  input: {},
+
+  inputGroup: {},
+
+  inputBlock: {},
 });
 
 export default styles;
