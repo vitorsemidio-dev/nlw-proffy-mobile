@@ -49,7 +49,7 @@ const TeacherItem: React.FC = () => {
             <Image source={heartOutlineIcon} />
           </RectButton>
 
-          <RectButton style={styles.favoriteButton}>
+          <RectButton style={styles.contactButton}>
             <Image source={whatsappIcon} />
             <Text style={styles.contactButtonText}>Entrar em contato</Text>
           </RectButton>
