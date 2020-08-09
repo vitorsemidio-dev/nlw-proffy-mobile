@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, TextInput } from 'react-native'
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, BorderlessButton } from 'react-native-gesture-handler';
+import { Feather } from '@expo/vector-icons';
 
 import PageHeader from '../../components/PageHeader';
 import TeacherItem from '../../components/TeacherItem';
@@ -13,7 +14,11 @@ function TeacherList() {
     <View style={styles.container} >
       <PageHeader 
         title="Proffys disponíveis"
-        headerRight={<Text>Teste</Text>}
+        headerRight={(
+          <BorderlessButton>
+            <Feather name="filter" size={20} color="#fff" />
+          </BorderlessButton>
+        )}
       >
         { isFiltersVisible && (
           <View style={styles.searchForm}>
