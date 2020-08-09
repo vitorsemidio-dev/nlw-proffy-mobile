@@ -1,13 +1,14 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
+
+import landingImg from '../../assets/images/landing.png'
 
 function Landing() {
   return (
-    <>
-      <Text>
-        Hello World
-      </Text>
-    </>
+    <View style={{backgroundColor: '#753951', flex: 1}}>
+      <Text>Hello</Text>
+      <Image source={landingImg} />
+    </View>
   )
 }
 
