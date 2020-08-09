@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { View, Text, TextInput } from 'react-native'
-import { ScrollView, BorderlessButton } from 'react-native-gesture-handler';
+import { ScrollView, BorderlessButton, RectButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
 
 import PageHeader from '../../components/PageHeader';
@@ -55,6 +55,12 @@ function TeacherList() {
                 />
               </View>
             </View>
+
+            <RectButton style={styles.submitButton}>
+              <Text style={styles.submitButtonText}>
+                Filtrar
+              </Text>
+            </RectButton>
           </View>
         )}
       </PageHeader>
