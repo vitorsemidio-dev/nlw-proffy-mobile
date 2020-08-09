@@ -4,6 +4,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import landingImg from '../../assets/images/landing.png'
 import studyIcon from '../../assets/images/icons/study.png';
 import giveClassesIcon from '../../assets/images/icons/give-classes.png';
+import HeartIcon from '../../assets/images/icons/heart.png';
 
 import styles from './styles';
 
@@ -34,6 +35,11 @@ function Landing() {
           </Text>
         </TouchableOpacity>
       </View>
+
+      <Text style={styles.connections}>
+        Total de 10 conexões realizadas {' '}
+        <Image source={HeartIcon} />
+      </Text>
     </View>
   )
 }
