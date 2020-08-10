@@ -3,12 +3,19 @@ import { View, Text, TextInput } from 'react-native'
 import { ScrollView, BorderlessButton, RectButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
 
+import api from '../../services/api';
+
 import PageHeader from '../../components/PageHeader';
 import TeacherItem from '../../components/TeacherItem';
 
 import styles from './styles';
 
+interface Teacher {
+  
+}
+
 function TeacherList() {
+  const [teachers, setTeachers] = useState<Teacher[]>([]);
   const [isFiltersVisible, setIsFiltersVisible] = useState(false);
 
   const [subject, setSubject] = useState('');
@@ -19,12 +26,23 @@ function TeacherList() {
     setIsFiltersVisible(!isFiltersVisible);
   }
 
-  function handleFiltersSubmit() {
+  async function handleFiltersSubmit() {
     console.log({
       subject,
       week_day,
       time,
     })
+
+    const response = await api.get<Teacher[]>('/classes', {
+      params: {
+        subject,
+        week_day,
+        time,
+      }
+    });
+
+    console.log(response.data);
+    setTeachers(response.data);
   }
 
   return (
