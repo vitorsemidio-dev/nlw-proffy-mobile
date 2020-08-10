@@ -114,12 +114,9 @@ function TeacherList() {
           paddingBottom: 16,
         }}
       >
-
-        <TeacherItem />
-        <TeacherItem />
-        <TeacherItem />
-        <TeacherItem />
-
+        {teachers.map(teacher => (
+          <TeacherItem key={String(teacher.id)} teacher={teacher} />
+        ))}
       </ScrollView>
     </View>
   );
